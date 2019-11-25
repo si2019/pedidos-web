@@ -6,7 +6,7 @@
 </head>
 
 <body>
-	<h1 class="center-text" th:with="text=${esNuevo} ? 'Crear cliente' : 'Editar cliente'"></h1>
+	<h1 class="center-text" th:text="${esNuevo} ? 'Crear cliente' : 'Editar cliente'"></h1>
 
 	<form th:object="${cliente}" class="form-horizontal" id="cliente-form" method="post">
 		<div class="form-group has-feedback">
@@ -28,9 +28,10 @@
 				<input class="col-10 form-control" th:field="*{direccion.telefono}" size="9" maxlength="9" />
 			</div>
 			<div class="form-group">
-				<button class="btn btn-lg btn-block btn-primary col-2" 
-				th:with="text=${esNuevo} ? 'Crear' : 'Guardar'"  type="submit" th:text="${text}">
+				<button class="btn btn-lg btn-block btn-primary col-2" th:text="${esNuevo} ? 'Crear' : 'Guardar'" type="submit">
 					Guardar</button>
+					
+					<a class="btn btn-lg btn-block btn-secondary col-2" th:href="@{/clientes/}">Cancelar</a>
 			</div>
 		</div>
 	</form>

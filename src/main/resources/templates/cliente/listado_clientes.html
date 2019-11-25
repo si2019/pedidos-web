@@ -45,7 +45,7 @@
 		</thead>
 		<tbody>
 			<tr th:each="cliente : ${clientes}">
-				<td><a th:href="@{/clientes/__${cliente.DNI}__}" th:text="${cliente.DNI}" /></a></td>
+				<td><a th:href="@{/clientes/__${cliente.DNI}__}" th:text="${cliente.DNI}"></a></td>
 				<td th:text="${cliente.nombre}" />
 				<td th:text="${cliente.direccion.domicilio}" />
 				<td th:text="${cliente.direccion.localidad}" />
