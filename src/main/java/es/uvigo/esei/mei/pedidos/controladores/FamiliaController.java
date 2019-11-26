@@ -49,7 +49,7 @@ public class FamiliaController {
 
 
 	@GetMapping("nueva")
-	public ModelAndView prepararNuevoFamilia() {
+	public ModelAndView prepararNuevaFamilia() {
 		Familia familia = new Familia();
 
 		ModelAndView result = new ModelAndView();
